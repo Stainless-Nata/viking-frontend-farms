@@ -101,6 +101,7 @@ export const useTotalValue = (): BigNumber => {
         val = (farm.lpTotalInQuoteToken);
       }
       value = value.plus(val);
+
     }
   }
   return value;
