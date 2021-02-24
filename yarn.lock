@@ -1837,7 +1837,7 @@
 
 "@pancakeswap-libs/uikit@VikingDefi/viking-uikit":
   version "0.10.2"
-  resolved "https://codeload.github.com/VikingDefi/viking-uikit/tar.gz/68297b4ae9a7b42a433a39bf7b271a9fb37adbab"
+  resolved "https://codeload.github.com/VikingDefi/viking-uikit/tar.gz/e0af393e776a4532d2fb95ef4dbf2038b17dbb6f"
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"

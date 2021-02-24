@@ -132,6 +132,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
         risk={risk}
+        depositFee={farm.depositFeeBP}
         farmImage={farmImage}
         tokenSymbol={farm.tokenSymbol}
       />
@@ -174,6 +175,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection
           removed={removed}
+          isTokenOnly={farm.isTokenOnly}
           bscScanAddress={
             farm.isTokenOnly ?
               `https://bscscan.com/token/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
