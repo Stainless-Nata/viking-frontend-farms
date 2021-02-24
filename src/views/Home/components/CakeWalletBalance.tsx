@@ -7,9 +7,8 @@ import { getCakeAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import CardValue from './CardValue'
 
-const CakeWalletBalance = () => {
+const CakeWalletBalance = ({cakeBalance}) => {
   const TranslateString = useI18n()
-  const cakeBalance = useTokenBalance(getCakeAddress())
   const { account } = useWallet()
 
   if (!account) {
