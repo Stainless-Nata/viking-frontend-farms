@@ -46,9 +46,8 @@ const FarmedStakingCard = () => {
   const farmsWithBalance = useFarmsWithBalance()
   const cakeBalance = getBalanceNumber(useTokenBalance(getCakeAddress()))
   const eggPrice = usePriceCakeBusd().toNumber()
-  const allEarnings = useAllEarnings()
-  const earningsSum = allEarnings.reduce((accum, earning) => {
-    return accum + new BigNumber(earning).div(new BigNumber(10).pow(18)).toNumber()
+  const earningsSum = farmsWithBalance.reduce((accum, farm) => {
+    return accum + new BigNumber(farm.balance).div(new BigNumber(10).pow(18)).toNumber()
   }, 0)
   const balancesWithValue = farmsWithBalance.filter((balanceType) => balanceType.balance.toNumber() > 0)
 
